@@ -1,0 +1,13 @@
+\.Rcheck$
+\.Rproj$
+\.tar\.gz$
+^LICENSE$
+^Makefile$
+^\#
+^\.Rhistory$
+^\.Rproj\.user$
+^\.\#
+^\.git$
+^\.travis\.yml$
+^appveyor\.yml$
+~$
