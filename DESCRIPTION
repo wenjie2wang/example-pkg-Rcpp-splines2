@@ -1,0 +1,28 @@
+Package: example.pkg.Rcpp.splines2
+Title: Example Package using splines2 with Rcpp
+Version: 0.0.0.9000
+Authors@R:
+    person(given = "Wenjie",
+           family = "Wang",
+           role = c("aut", "cre"),
+           email = "wjwang.stat@gmail.com",
+           comment = c(ORCID = "0000-0003-0363-3180"))
+Description:
+    An example pacakge that demonstrates how to use splines2 with Rcpp.
+Imports:
+    Rcpp
+LinkingTo:
+    Rcpp,
+    RcppArmadillo,
+    splines2 (>= 0.3.0)
+Depends:
+    R (>= 3.2.3)
+Suggests:
+    microbenchmark
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/wenjie2wang/example-pkg-Rcpp-splines2
+BugReports: https://github.com/wenjie2wang/example-pkg-Rcpp-splines2/issues
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
