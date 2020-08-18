@@ -1,11 +1,10 @@
 Package: example.pkg.Rcpp.splines2
 Title: Example Package using splines2 with Rcpp
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R:
-    person(given = "Wenjie",
-           family = "Wang",
+    person(given = "Wenjie", family = "Wang",
+           email = "wang@wwenjie.org",
            role = c("aut", "cre"),
-           email = "wjwang.stat@gmail.com",
            comment = c(ORCID = "0000-0003-0363-3180"))
 Description:
     An example pacakge that demonstrates how to use splines2 with Rcpp.
