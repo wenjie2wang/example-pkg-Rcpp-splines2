@@ -1,6 +1,8 @@
 Example Package using splines2 with Rcpp
 ================
 
+[![Build Status][gha-icon]][gha-url]
+
 Since v0.3.0, the **[splines2][splines2-github]** package provides C++ interface
 for constructing regression spline bases.  This repository contains an example
 package that demonstrates its usage with help of **Rcpp**.
@@ -35,3 +37,5 @@ the C++ interface.
 
 
 [splines2-github]: https://github.com/wenjie2wang/splines2
+[gha-icon]: https://github.com/wenjie2wang/example-pkg-Rcpp-splines2/workflows/R-CMD-check/badge.svg
+[gha-url]: https://github.com/wenjie2wang//actions
