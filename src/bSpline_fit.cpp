@@ -32,8 +32,8 @@ Rcpp::List rcpp_bSpline_fit(const arma::vec& x,
     }
     // compute B-spline basis; true for complete basis including intercept
     arma::mat bs_mat { bs_obj.basis(true) };
-    // compute their derivatives
-    arma::mat dbs_mat { bs_obj.derivative(true) };
+    // compute their first derivatives
+    arma::mat dbs_mat { bs_obj.derivative(1, true) };
     // linear regression
     arma::vec beta { inv_sympd(bs_mat.t() * bs_mat) * (bs_mat.t() * y) };
     arma::vec y_hat { bs_mat * beta };
