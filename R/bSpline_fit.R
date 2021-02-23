@@ -9,7 +9,6 @@
 ##'     (including the intercept term).
 ##' @param degree A non-negative integer representing the degree of the
 ##'     piecewise polynomial.
-##' @param internal_knots An optional numeric vector for internal knots.
 ##' @param boundary_knots An optional numeric vector (of length two) for
 ##'     boundary knots.  By default, they are the range of the non-\code{NA}
 ##'     data.
@@ -26,8 +25,7 @@
 ##'
 ##' @export
 bSpline_fit <- function(x, y, df, degree = 3,
-                        internal_knots = numeric(),
                         boundary_knots = numeric())
 {
-    rcpp_bSpline_fit(x, y, df, degree, internal_knots, boundary_knots)
+    rcpp_bSpline_fit(x, y, df, degree, boundary_knots)
 }

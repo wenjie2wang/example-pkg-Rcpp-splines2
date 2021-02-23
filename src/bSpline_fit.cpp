@@ -15,22 +15,13 @@ Rcpp::List rcpp_bSpline_fit(const arma::vec& x,
                             const arma::vec& y,
                             const unsigned int df,
                             const unsigned int degree,
-                            const arma::vec& internal_knots,
                             const arma::vec& boundary_knots)
 {
     // BSpline object
-    splines2::BSpline bs_obj;
-    // if df > 0 and knots are not specified
-    // auto set internal knots based on df
-    if (df > 0 && internal_knots.n_elem == 0) {
-        // compute actual spline degree of freedom
-        unsigned int spline_df { df };
-        bs_obj = splines2::BSpline(x, spline_df, degree, boundary_knots);
-    } else {
-        // else ignore df
-        bs_obj = splines2::BSpline(x, internal_knots, degree, boundary_knots);
-    }
-    // compute B-spline basis; true for complete basis including intercept
+    splines2::BSpline bs_obj {
+        x, df, degree, boundary_knots
+    };
+    // get B-spline basis functions
     arma::mat bs_mat { bs_obj.basis(true) };
     // compute their first derivatives
     arma::mat dbs_mat { bs_obj.derivative(1, true) };

@@ -4,14 +4,7 @@
 \alias{bSpline_fit}
 \title{One Dimensional Curve Fitting with B-splines}
 \usage{
-bSpline_fit(
-  x,
-  y,
-  df,
-  degree = 3,
-  internal_knots = numeric(),
-  boundary_knots = numeric()
-)
+bSpline_fit(x, y, df, degree = 3, boundary_knots = numeric())
 }
 \arguments{
 \item{x}{A numeric vector representing the predictor.}
@@ -23,8 +16,6 @@ bSpline_fit(
 
 \item{degree}{A non-negative integer representing the degree of the
 piecewise polynomial.}
-
-\item{internal_knots}{An optional numeric vector for internal knots.}
 
 \item{boundary_knots}{An optional numeric vector (of length two) for
 boundary knots.  By default, they are the range of the non-\code{NA}

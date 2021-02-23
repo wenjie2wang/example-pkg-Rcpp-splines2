@@ -7,8 +7,8 @@
 using namespace Rcpp;
 
 // rcpp_bSpline_fit
-Rcpp::List rcpp_bSpline_fit(const arma::vec& x, const arma::vec& y, const unsigned int df, const unsigned int degree, const arma::vec& internal_knots, const arma::vec& boundary_knots);
-RcppExport SEXP _example_pkg_Rcpp_splines2_rcpp_bSpline_fit(SEXP xSEXP, SEXP ySEXP, SEXP dfSEXP, SEXP degreeSEXP, SEXP internal_knotsSEXP, SEXP boundary_knotsSEXP) {
+Rcpp::List rcpp_bSpline_fit(const arma::vec& x, const arma::vec& y, const unsigned int df, const unsigned int degree, const arma::vec& boundary_knots);
+RcppExport SEXP _example_pkg_Rcpp_splines2_rcpp_bSpline_fit(SEXP xSEXP, SEXP ySEXP, SEXP dfSEXP, SEXP degreeSEXP, SEXP boundary_knotsSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -16,15 +16,14 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< const arma::vec& >::type y(ySEXP);
     Rcpp::traits::input_parameter< const unsigned int >::type df(dfSEXP);
     Rcpp::traits::input_parameter< const unsigned int >::type degree(degreeSEXP);
-    Rcpp::traits::input_parameter< const arma::vec& >::type internal_knots(internal_knotsSEXP);
     Rcpp::traits::input_parameter< const arma::vec& >::type boundary_knots(boundary_knotsSEXP);
-    rcpp_result_gen = Rcpp::wrap(rcpp_bSpline_fit(x, y, df, degree, internal_knots, boundary_knots));
+    rcpp_result_gen = Rcpp::wrap(rcpp_bSpline_fit(x, y, df, degree, boundary_knots));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_example_pkg_Rcpp_splines2_rcpp_bSpline_fit", (DL_FUNC) &_example_pkg_Rcpp_splines2_rcpp_bSpline_fit, 6},
+    {"_example_pkg_Rcpp_splines2_rcpp_bSpline_fit", (DL_FUNC) &_example_pkg_Rcpp_splines2_rcpp_bSpline_fit, 5},
     {NULL, NULL, 0}
 };
 
